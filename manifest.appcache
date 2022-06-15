@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+Cache-Control: max-age=31536000
+
+DATE: 2019-11-09
+
+CACHE:
+
+css/style.css
+
+error.html
+index.html
+
+NETWORK:
+*
+
+FALLBACK:
+#static.html

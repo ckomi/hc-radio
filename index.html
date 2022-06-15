@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" manifest="manifest.appcache">
+
+<head>
+
+    <title>HC Radio - Enjoy in listening</title>
+    <meta name="description" content="Listen top hard core music tracks any time, everywhere" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link href="”http://www.hcradio.epizy.com”/" rel="”canonical”" />
+    <!--=================================== FONT ===================================-->
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
+    <!--=============================== FA FA ICONS ================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--============================== BOOKMARK ICON ==============================-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/home/hcwhite.ico" />
+    <!--=================================== CSS ===================================-->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <!--================================== SCROLL ==================================-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--================================== JQUERY ==================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--================================ PARTICLES JS ================================-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!--===========================>>>>>>>> GOOGLE <<<<<<<<===========================-->
+    <!------------------------------ SITEMAP VERIFICATION ------------------------------------>
+    <meta name="google-site-verification" content="lHU2j-xnqXBrvy_ejvjGItgDK384FjjxNIzTq5ZzyHo" />
+    <!----------------------- GTAG Google Analytics Verification ----------------------->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151950517-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-151950517-1');
+    </script>
+</head>
+
+<body>
+
+    <!--=========================================================== LOADING ===========================================================-->
+    <div id="loading">
+        <div id="logo">
+            <img id="img1" src="img/home/rotatinglogo.png" alt="loading please wait...">
+        </div>
+    </div>
+    <!--=========================================================== HOME ===========================================================-->
+    <header id="header">
+        <!-------========== BURGER NAV MOBILE ==========------->
+        <div class="brandForMobile">
+            <a href="#header"><img src="img/home/hcwhite.png" alt="HC"></a>
+        </div>
+        <div class="burger" id="hamburger" onclick="openBurger();">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <!------ OVERLAY BCKG MOBILE ------>
+        <div class="overlay" id="overover"></div>
+        <!-------========== NAV BAR ==========------->
+        <nav id="navnav">
+            <div class="brand">
+                <a href="#header"><img src="img/home/hcwhite.png" alt="HC"></a>
+            </div>
+            <ul>
+                <li class="linkKaElem"><a href="#playhc">HC Radio</a></li>
+                <li class="linkKaElem" id="playlistID"><a href="#playlistButtons">Playlists</a></li>
+                <li class="linkKaElem"><a href="#eventSection">Events</a></li>
+                <li class="linkKaElem"><a href="#aboutSection">About Us</a></li>
+                <li class="linkKaElem" id="contactusID"><a href="#contactButtons">Contact</a></li>
+            </ul>
+        </nav>
+        <!-------========== WELCOME DESCRIPTION ==========------->
+        <h1 class="h1">Play HardCore music now!</h1>
+        <p>We're creative and unique music website, here you can be in touch with top rated events arroun country and listen music you need! Go and listen now:</p>
+        <div class="loginButton"><a class="lButton" href="#playhc">PLAY</a></div>
+    </header>
+    <!--=========================================================== PLAY HC ===========================================================-->
+    <div id="playhc">
+        <!-------========== PARTICLES JS ==========------->
+        <div id="particles-js" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <h1 data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">Enjoy the moment of music</h1>
+            <!-------========== ROTATING MUSIC IMG-s ==========------->
+            <div id="musicL">
+                <img id="musiclogo" data-aos="fade-in" data-aos-anchor-placement="center-bottom" src="img/playlogo/music.png" alt="rotating disk">
+            </div>
+            <div id="diskL">
+                <img id="disklogo" data-aos="fade-in" data-aos-anchor-placement="center-bottom" src="img/playlogo/disk.png" alt="rotating disk logo">
+            </div>
+            <div id="playL">
+                <img id="playlogo" data-aos="fade-in" data-aos-anchor-placement="center-bottom" onclick="playPause(); play();" src="img/playlogo/play.svg" alt="play">
+            </div>
+            <div id="pauseL">
+                <img id="pauselogo" data-aos="fade-in" data-aos-anchor-placement="center-bottom" onclick="playPause(); pause();" src="img/playlogo/pause.svg" alt="pause">
+            </div>
+            <!-------========== STREAMS LIST ==========------->
+            <div class="menu">
+                <input type="checkbox" id="toggle" />
+                <label id="show-menu" for="toggle">
+                    <div class="btn">
+                        <!------ OPEN LIST ------>
+                        <div class="toggleBtn menuBtn" id="openlogo">
+                            <img src="img/streams/open.svg" alt="cog1">
+                        </div>
+                        <!------ CLOSE LIST ------>
+                        <div class="toggleBtn closeBtn" id="closelogo">
+                            <img src="img/streams/close.svg" alt="cog1">
+                        </div>
+                    </div>
+                    <!------ STREAMS ------>
+                    <div class="btn" id="technobtn">
+                        <img id="techno" src="img/streams/techno.png" alt="cog1" onclick="playTechno(); pause();">
+                    </div>
+                    <div class="btn" id="trancebtn">
+                        <img id="trance" src="img/streams/trance.png" alt="cog1" onclick="playTrance(); pause();">
+                    </div>
+                    <div class="btn" id="hiphopbtn">
+                        <img id="hiphop" src="img/streams/hiphop.png" alt="cog1" onclick="playHipHop(); pause();">
+                    </div>
+                    <div class="btn" id="ambientbtn">
+                        <img id="ambient" src="img/streams/ambient.png" alt="cog1" onclick="playAmbient(); pause();">
+                    </div>
+                </label>
+            </div>
+            <!-------========== AUDIO STREAM ==========------->
+            <audio id="music" src="http://uk7.internet-radio.com:8000/listen.pls" preload="auto"></audio>
+        </div>
+        <!-------========== PLAYLISTS BUTTON ==========------->
+        <div id="playlistButtons" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <!------ OPEN PLAYLIST ------>
+            <div class="showPlaylistButton" onclick="showPlaylist();"><a class="pShowButton">Playlists</a></div>
+            <!------ ARROWS DOWN ------>
+            <div class="showPlaylistScrolldown" id="plsDownArrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!------ CLOSE PLAYLIST ------>
+            <div class="hidePlaylistButton" onclick="hidePlaylist();"><a class="pHideButton">&nbsp;&nbsp; CLOSE &nbsp;&nbsp;</a></div>
+            <!------ ARROWS UP ------>
+            <div class="hidePlaylistScrolldown" id="plsUpArrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!--=========================================================== PLAYLISTS =============================================================-->
+    <div id="playlists">
+        <!-------========== PLAYLIST IMG & LINKS ==========------->
+        <div id="playlistitems">
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=xlZashTlLTg&list=PLYyGDsBu_r9Jud_iIs3vzWbNV1bqx_GqG" target="_blank"><img src="img/playlist/techno.jpg" alt="playlistitem"></a>
+            </div>
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=ooiTg2pmcNo&list=PLYyGDsBu_r9IOLAH0vCd0HHmYfISmOWq1" target="_blank"><img src="img/playlist/drumcode.jpg" alt="playlistitem"></a>
+            </div>
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=bafIhy1ra1g&list=PLYyGDsBu_r9KI6Vbgoc7fkrCWj5m29Sal" target="_blank"><img src="img/playlist/trance.jpg" alt="playlistitem"></a>
+            </div>
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=Bvu17g6A4Mo&list=PLYyGDsBu_r9LpB8lZsr2lcGVi-lWk685A" target="_blank"><img src="img/playlist/deephouse.jpg" alt="playlistitem"></a>
+            </div>
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=4SppgWy7H2Y&list=PLYyGDsBu_r9K1EguVsu_BBN6IwHF_HQy_" target="_blank"><img src="img/playlist/psybient.jpg" alt="playlistitem"></a>
+            </div>
+            <div class="gotoplay" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+                <a href="https://www.youtube.com/watch?v=tFqz4_sSaAk&list=PLYyGDsBu_r9K8YgBSdz0mRyCZq_FnZDca" target="_blank"><img src="img/playlist/chill.jpg" alt="playlistitem"></a>
+            </div>
+        </div>
+    </div>
+    <!--=========================================================== EVENTS =============================================================-->
+
+
+    <div id="eventSection">
+        <h6 data-aos="fade-in" data-aos-anchor-placement="center-bottom">Top upcoming events</h6>
+        <div class="eventhc" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <img src="img/events/1.jpg" alt="Slika dogadjaja">
+            <div class="eventInfo">
+                <h1>LoveFest</h1>
+                <h2>Svojom objavom lineup-a Lovefest je zasijao punim sjajem! Vreme je da se svi zajedno naoštrimo za ono što nas očekuje tokom tri vrele avgustovske noći.</h2>
+                <article>
+                    <h3><i class="fa fa-location-arrow" aria-hidden="true">&nbsp; Vrnjacka Banja</i></h3>
+                    <h4><i class="fa fa-calendar" aria-hidden="true">&nbsp; 6-8.8.2020.</i></h4>
+                    <h5><i class="fa fa-ticket" aria-hidden="true">&nbsp; 3499 RSD</i></h5>
+                </article>
+            </div>
+        </div>
+        <div class="eventhc" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <img src="img/events/2.jpg" alt="Slika dogadjaja">
+            <div class="eventInfo">
+                <h1>Exit Festival</h1>
+                <h2>U svojoj dugogodišnjoj tradiciji festivala koji je nastao iz društvenog aktivizma, i ove godine ce predstaviti svim posetiocima svoj napredak.</h2>
+                <article>
+                    <h3><i class="fa fa-location-arrow" aria-hidden="true">&nbsp; Petrovaradinska tvrdjava</i></h3>
+                    <h4><i class="fa fa-calendar" aria-hidden="true">&nbsp; 9-12.7.2020.</i></h4>
+                    <h5><i class="fa fa-ticket" aria-hidden="true">&nbsp; 6490 RSD</i></h5>
+                </article>
+            </div>
+        </div>
+        <div class="eventhc" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <img src="img/events/3.jpg" alt="Slika dogadjaja">
+            <div class="eventInfo">
+                <h1>No Sleep Festival</h1>
+                <h2>Postoji mnogo razloga zbog kojih je treće izdanje No Sleep festivala već mesecima unazad upisano u kalendar svakog ljubitelja dobrog rejva.</h2>
+                <article>
+                    <h3><i class="fa fa-location-arrow" aria-hidden="true">&nbsp; Beograd, Hangar Luka</i></h3>
+                    <h4><i class="fa fa-calendar" aria-hidden="true">&nbsp; 13-15.11.2020.</i></h4>
+                    <h5><i class="fa fa-ticket" aria-hidden="true">&nbsp; 1990 RSD</i></h5>
+                </article>
+            </div>
+        </div>
+
+
+        <div class="cleaner"></div>
+    </div>
+    <!--=========================================================== ABOUT US =============================================================-->
+    <div id="aboutSection">
+        <!-------========== PARALAX HEADER BCKG ==========------->
+        <div id="mainer">
+            <img src="img/aboutus/pozadina.jpg" alt="aboutus background" />
+            <h1 data-aos="fade-in" data-aos-anchor-placement="center-bottom">About us</h1>
+            <div id="peoples">
+                <img src="img/aboutus/peoples.png" alt="aboutus parallax peoples" />
+            </div>
+        </div>
+        <div id="aboutus">
+            <!-------========== WHY WE ICONS ==========------->
+            <div id="whywe">
+                <div class="whyweIcons" id="whyIcon1">
+                    <img src="img/aboutus/views.svg" alt="aboutus parallax peoples" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
+                    <h6 data-aos="fade-up" data-aos-anchor-placement="top-center">5478</h6>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-center">Views</p>
+                </div>
+                <div class="whyweIcons">
+                    <img src="img/aboutus/play.svg" id="whyIcon2" alt="aboutus parallax peoples" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
+                    <h6 data-aos="fade-up" data-aos-anchor-placement="top-center">2345</h6>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-center">Plays</p>
+                </div>
+                <div class="whyweIcons">
+                    <img src="img/aboutus/listening.svg" id="whyIcon3" alt="aboutus parallax peoples" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
+                    <h6 data-aos="fade-up" data-aos-anchor-placement="top-center">131</h6>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-center">Listening</p>
+                </div>
+                <div class="whyweIcons">
+                    <img src="img/aboutus/people.svg" id="whyIcon4" alt="aboutus parallax peoples" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" />
+                    <h6 data-aos="fade-up" data-aos-anchor-placement="top-center">472</h6>
+                    <p data-aos="fade-up" data-aos-anchor-placement="top-center">Members</p>
+                </div>
+            </div>
+            <!-------========== ABOUT US DESCRIPTION ==========------->
+            <h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom">HardCore radio is a commercial free worldwide available for everyone. We were founded in 2018 and every day we’re working on adding some new content. Currently our radio plays four genres of world-class music. Whether you’re behind the wheel,
+                working out, partying, relaxing, studying or gaming we’re here for you. You can choose your genre and enjoy in the best of techno, (Psy)trance, hip-hop or ambient.
+                <br/> Whatever you choose mobile, desktop or smart devices you can take pleasure in our radio.
+                <br/>
+                <br/> Feel free to contact us.
+            </h2>
+            <!-------========== CONTACT US BUTTON ==========------->
+            <div id="contactButtons" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <!------ OPEN CONTACT ------>
+                <div class="showContactButton" onclick="showContact();"><a href="#contactus" class="cShowButton">CONTACT</a></div>
+                <!------ ARROWS DOWN ------>
+                <div class="showContactScrolldown" id="downArrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!------ CLOSE CONTACT ------>
+                <div class="hideContactButton" onclick="hideContact();"><a class="cHideButton">&nbsp; CLOSE &nbsp;</a></div>
+                <!------ ARROWS UP ------>
+                <div class="hideContactScrolldown" id="upArrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    <!--=========================================================== CONTACT =============================================================-->
+    <div id="contactus">
+        <!-------========== CONTACT FORM ==========------->
+        <form class="contactForm" action="index.html" method="post">
+            <input id="formName" type="text" name="name" placeholder="Your name" required data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <input id="formSurname" type="text" name="surname" placeholder="Your surname" required data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <input id="formMail" type="text" name="mail" placeholder="Your mail address" required data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <input id="formPhone" type="number" name="phone" placeholder="Your mobile" required data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <input id="formMessage" type="text" name="message" placeholder="Type what you want to ask" required data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <button id="formButton" type="submit" name="send" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">SEND</button>
+        </form>
+    </div>
+    <!--=========================================================== FOOTER =============================================================-->
+    <div id="footer">
+        <!-------========== SOCIAL MEDIA ==========------->
+        <div id="socialmedias" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <a class="socialIcon" href="https://www.youtube.com/channel/UCKRtDTxyvwbMqYbmt54Zk_A" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a class="socialIcon" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="socialIcon" href="https://www.linkedin.com/in/miomirvukovic" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="socialIcon" href="https://dribbble.com/ckomi" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+            <a class="socialIcon" href="https://www.behance.net/vukovicmio0033" target="_blank"><i class="fa fa-behance-square" aria-hidden="true"></i></a>
+            <!-- FB API SHARE BUTTON FOR 'SEO' -->
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http://hcradio.epizy.com/&layout=button&size=small&mobile_iframe=true&width=60&height=20&appId" hidden="true"></iframe>
+        </div>
+        <!-------========== FOOTER LINKS ==========------->
+        <div id="footerlinks" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <!------ LEFT SIDE ------>
+            <div id="footerleft">
+                <a class="pagelinked" href="#header">Tap to go Home</a><br/>
+                <a class="pagelinked" href="#eventSection">See next Events</a>
+            </div>
+            <!------ RIGHT SIDE ------>
+            <div id="footerright">
+                <a class="pagelinked" href="#playhc">Lets play HardCore</a><br/>
+                <a class="pagelinked" href="#aboutSection">Cheek who We are</a>
+            </div>
+        </div>
+        <!-------========== COPYRIGHT ==========------->
+        <div id="copyright" data-aos="fade-in" data-aos-anchor-placement="center-bottom">
+            <p><a href="https://www.linkedin.com/in/miomirvukovic" target="_blank">© Copyright 2019 All right received Miomir Vukovic</a></p>
+        </div>
+    </div>
+    <!--================================= SCRIPTS ==================================-->
+    <script src="js/index.min.js"></script>
+</body>
+
+</html>
